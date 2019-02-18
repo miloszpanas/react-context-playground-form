@@ -1,16 +1,27 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const Contact = () => {
-  return (
-    <div>
-      <h3>Some data to display</h3>
-      <ul>
-        <li>Name:</li>
-        <li>Surnameame:</li>
-        <li>Email:</li>
-      </ul>
-    </div>
-  );
+class Contact extends React.Component {
+  render() {
+    const { name, surname, email, phone } = this.props;
+    
+    return (
+      <div>
+        <h3>Name: {`${name} ${surname}`}</h3>
+        <ul>
+          <li>Email: {email}</li>
+          <li>Phone: {phone}</li>
+        </ul>
+      </div>
+    );
+  }
+}
+
+Contact.propTypes = {
+  name: PropTypes.string.isRequired,
+  surname: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  phone: PropTypes.number.isRequired
 };
 
 export default Contact;

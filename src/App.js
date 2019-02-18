@@ -7,7 +7,18 @@ class App extends Component {
     return (
       <div className="App">
         <Header appName="Contact handler" />
-        <Contact />
+        <Contact 
+          name="Michael"
+          surname="Night"
+          email="m.night@gmail.com"
+          phone={664-334-667}
+        />
+        <Contact 
+          name="Marry"
+          surname="Ann"
+          email="marry@gmail.com"
+          phone={664-344-557}
+        />
       </div>
     );
   }
