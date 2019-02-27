@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import Contact from "./Contact";
 
 export default class Contacts extends Component {
@@ -28,15 +28,25 @@ export default class Contacts extends Component {
       ]
     };
 
+  deleteContact = (id) => {
+    console.log(id);
+    const { contacts } = this.state;
+    const newContacts = contacts.filter(contact => contact.id !== id);
+
+    this.setState({
+      contacts: newContacts
+    });
+  };
+
   render() {
     const { contacts } = this.state;
 
     return (
-      <div>
+      <Fragment>
         {contacts.map(contact => {
-          return <Contact key={contact.id}data={contact} />;
+          return <Contact key={contact.id}data={contact} deleteClickhandler={this.deleteContact.bind(this, contact.id)} />;
         })}
-      </div>
+      </Fragment>
     );
   }
 }
