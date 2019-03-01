@@ -7,13 +7,14 @@ const reducer = (state, action) => {
     case "DELETE_CONTACT":
       return {
         ...state,
-        contacts: state.contacts.filter(contact => contact.id !== action.payload)
+        contacts: state.contacts.filter(
+          contact => contact.id !== action.payload
+        )
       };
     default:
       return state;
   }
 };
-
 class Provider extends Component {
   state = {
     contacts: [
@@ -40,7 +41,7 @@ class Provider extends Component {
       }
     ],
     dispatch: action => {
-      this.setState( state => reducer(state, action) )
+      this.setState(state => reducer(state, action));
     }
   };
 
