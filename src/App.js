@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import Provider from "./context";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 import Contacts from "./components/Contacts/Contacts";
 import Header from "./components/Layout/Header";
 import About from "./components/Pages/About";
 import AddContact from "./components/Contacts/AddContact";
-import "bootstrap/dist/css/bootstrap.min.css";
+import NotFound from "./components/Pages/NotFound";
+import Test from './components/Pages/Test';
 
-import Provider from "./context";
 
 class App extends Component {
   render() {
@@ -21,6 +24,8 @@ class App extends Component {
                   <Route exact path="/" component={Contacts} />
                   <Route exact path="/contact/add" component={AddContact} />
                   <Route exact path="/about" component={About} />
+                  <Route exact path="/test" component={Test} />
+                  <Route component={NotFound} />
                 </Switch>
               </div>
             </div>
