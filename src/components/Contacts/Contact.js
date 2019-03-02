@@ -35,7 +35,7 @@ class Contact extends React.Component {
           const { dispatch } = value;
           return (
             <div className="card card-body mb-3">
-              <h4 style={{ display: "flex", justifyContent: "space-between" }}>
+              <h4 style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                 {name}
                 <i
                   onClick={this.onShowClick}
