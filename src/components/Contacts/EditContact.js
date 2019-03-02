@@ -37,12 +37,10 @@ class EditContact extends Component {
       this.setState({ errors: { name: "please, provide a name" } });
       return;
     }
-
     if (email === "") {
       this.setState({ errors: { email: "please, provide an e-mail" } });
       return;
     }
-
     if (phone === "") {
       this.setState({ errors: { phone: "please, provide a phone no." } });
       return;
