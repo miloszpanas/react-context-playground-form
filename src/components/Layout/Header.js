@@ -9,7 +9,7 @@ const Header = (props) => {
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-primary mb-3 py-0">
       <div className="container">
-        <Link to="/" className="navbar-brand">
+        <Link to="/react-playground-form" className="navbar-brand">
           {appName}
         </Link>
         <div>
