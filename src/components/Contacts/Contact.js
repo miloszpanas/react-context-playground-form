@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import { Consumer } from "../../context";
 import axios from "axios";
 
@@ -34,19 +35,21 @@ class Contact extends React.Component {
           const { dispatch } = value;
           return (
             <div className="card card-body mb-3">
-              <h4>
+              <h4 style={{ display: "flex", justifyContent: "space-between" }}>
                 {name}
                 <i
                   onClick={this.onShowClick}
                   className="fas fa-chevron-down"
-                  style={{ cursor: "pointer", marginLeft: 5, color: "#0078F9" }}
+                  style={{ cursor: "pointer", marginLeft: 5, color: "#0078F9", marginRight: "auto" }}
                 />
+                <Link to={`/contact/edit/${id}`}>
+                  <i className="far fa-edit text-success" style={{ marginRight: "0.6rem" }} />
+                </Link>
                 <i
                   onClick={this.onItemDelete.bind(this, id, dispatch)}
                   className="fas fa-times"
                   style={{
                     cursor: "pointer",
-                    float: "right",
                     color: "darkred"
                   }}
                 />
