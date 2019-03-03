@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/react-playground-form/precache-manifest.767dd1c1a62cb1346d0b9e3650fbe83d.js"
+  "/react-context-playground-form/precache-manifest.cc205bd1b22eb437fb7ac7ef86712508.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/react-playground-form/index.html", {
+workbox.routing.registerNavigationRoute("/react-context-playground-form/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
